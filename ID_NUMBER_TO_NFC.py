@@ -21,7 +21,7 @@ def convert_to_hex():
     # 将十进制字符串转换为十六进制
     hex_str = hex(int(decimal_str))[2:]
 
-    # 检测转换后的十六进制字符串是否为10位
+    # 检测转换后的十六进制字符串是否为8位,不足8位则在首位加0直至补足八位
     if len(hex_str) < 8:
         hex_str = '0' * (8 - len(hex_str)) + hex_str
 
